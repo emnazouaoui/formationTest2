@@ -1,0 +1,16 @@
+<h2>Domaine Details</h2>
+
+<hr/>
+<div *ngIf="domaine">
+  <div>
+    <label><b>Id: </b></label> {{domaine.id}}
+  </div>
+  <div>
+    <label><b>Libelle: </b></label> {{domaine.libelle}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Domaine List</button><br>
+
