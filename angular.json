@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "worldcupFront"
+    }
+  },
+  "defaultProject": "worldcupFront",
+  "cli": {
+    "analytics": false
+  }
 }
