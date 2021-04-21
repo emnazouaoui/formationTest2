@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+
+
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
-import { BoardUserComponent } from './board-user/board-user.component';
-import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { RegisterComponent } from './register/register.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { HomeComponent } from './home/home.component';
 
 
-import { DomaineUpdateComponent } from './domaine/domaine-update/domaine-update.component';
-import { DomaineListComponent } from './domaine/domaine-list/domaine-list.component';
-
-import { CreateDomaineComponent } from './domaine/create-domaine/create-domaine.component';
+//import { DomaineComponent } from './domaine/domaine.component';
+import { DomaineAddComponent } from './domaine/domaine-add/domaine-add.component';
 import { DomaineDetailsComponent } from './domaine/domaine-details/domaine-details.component';
-
-import { DomaineTestComponent } from './domaine/domaine-test/domaine-test.component';
+import { DomaineListComponent } from './domaine/domaine-list/domaine-list.component';
+import { DomaineUpdateComponent } from './domaine/domaine-update/domaine-update.component';
 
 
 
@@ -33,12 +34,14 @@ const routes: Routes = [
   { path: 'domaines', component: DomaineListComponent },
   { path: 'updateDomaine/:id', component: DomaineUpdateComponent},
 
-  { path: 'adddomaine', component: CreateDomaineComponent },
-  { path: 'domaine/:id', component: DomaineDetailsComponent },
-  { path: 'testdomaine', component: DomaineTestComponent }
+  { path: 'adddomaine', component: DomaineAddComponent },
+  { path: 'domaine/:id', component: DomaineDetailsComponent }
+
+
 
 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

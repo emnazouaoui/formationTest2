@@ -1,49 +1,51 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
-import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+//import { DomaineComponent } from './domaine/domaine.component';
+import { DomaineAddComponent } from './domaine/domaine-add/domaine-add.component';
+import { DomaineDetailsComponent } from './domaine/domaine-details/domaine-details.component';
+import { DomaineListComponent } from './domaine/domaine-list/domaine-list.component';
+import { DomaineUpdateComponent } from './domaine/domaine-update/domaine-update.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
 import { authInterceptorProviders } from './_helpers/auth.service';
 
 
-import { DomaineUpdateComponent } from './domaine/domaine-update/domaine-update.component';
-import { DomaineListComponent } from './domaine/domaine-list/domaine-list.component';
-import { DomaineTestComponent } from './domaine/domaine-test/domaine-test.component';
 
-import { CreateDomaineComponent } from './domaine/create-domaine/create-domaine.component';
-import { DomaineDetailsComponent } from './domaine/domaine-details/domaine-details.component';
 
+
+//    DomaineComponent,
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-
-
-
-    DomaineUpdateComponent,
+    DomaineAddComponent,
+    DomaineDetailsComponent,
     DomaineListComponent,
-    DomaineTestComponent,
+    DomaineUpdateComponent,
+    HomeComponent,
+    LoginComponent,
+    ProfileComponent,
+    RegisterComponent
 
-    CreateDomaineComponent,
-    DomaineDetailsComponent
+
+
+
 
 
   ],
@@ -51,7 +53,9 @@ import { DomaineDetailsComponent } from './domaine/domaine-details/domaine-detai
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
