@@ -10,7 +10,6 @@ import { RegisterComponent } from './register/register.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-import { HomeComponent } from './home/home.component';
 
 
 //import { DomaineComponent } from './domaine/domaine.component';
